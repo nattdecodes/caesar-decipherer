@@ -1,50 +1,50 @@
-
+# pylint: disable=missing-module-docstring
+# pylint: disable=missing-function-docstring
 def cipher_decrypt(ciphertext, key):
     decrypted = ""
-    for c in ciphertext:
+    for char in ciphertext:
         # UPPERCASE
-        if c.isupper(): 
-            c_index = ord(c) - ord('A')
+        if char.isupper():
+            c_index = ord(char) - ord('A')
             # shift the current character to left by key positions to get its original position
             c_og_pos = (c_index - key) % 26 + ord('A')
             c_og = chr(c_og_pos)
             decrypted += c_og
         # lowercase
-        elif c.islower(): 
-            c_index = ord(c) - ord('a') 
+        elif char.islower():
+            c_index = ord(char) - ord('a')
             c_og_pos = (c_index - key) % 26 + ord('a')
             c_og = chr(c_og_pos)
             decrypted += c_og
         else:
             # if its neither alphabetical nor a number, just leave it like that
-            decrypted += c
+            decrypted += char
     return decrypted
 
-def checkVocab(possibleMsg):
+def check_vocab(possible_msg):
     hits = 0
-    for word in possibleMsg[0].split():
-        with open(r"englishwords.txt", "r") as wEn:
-            for line in wEn:
+    for word in possible_msg[0].split():
+        with open(r"englishwords.txt", "r", encoding="utf8") as wl_en:
+            for line in wl_en:
                 if line.strip() == word.lower():
                     hits += 1
                     break # next word
-                else:
-                    continue # next line
-    possibleMsg.append(hits) # format ["possible message", keynbr, hitsnbr]
+                continue # else: next line
+    possible_msg.append(hits) # format ["possible message", keynbr, hitsnbr]
 
-def decryptAllCases(encryptedMsg):
+def decrypt_all(encrypted_msg):
     k = 25 # all possible keys
-    possibleMsgs = []
+    poss_msgs = []
     while k > 0:
-        decryptedPossible = cipher_decrypt(encryptedMsg, k)
-        possibleMsgs.append(decryptedPossible)
-        possibleMsgs.append(k)
+        decrypted_possible = cipher_decrypt(encrypted_msg, k)
+        poss_msgs.append(decrypted_possible)
+        poss_msgs.append(k)
         k -= 1
-    possibleMsgs = [possibleMsgs[x:x+2] for x in range(0, len(possibleMsgs), 2)]
-    for possibleMsg in possibleMsgs:
-        checkVocab(possibleMsg)
-    possibleMsgs = sorted(possibleMsgs, key=lambda x:x[2], reverse=True)
-    print(f"deciphered message > {possibleMsgs[0][0]}")
-    print(f"key > {possibleMsgs[0][1]}")
+    poss_msgs = [poss_msgs[x:x+2] for x in range(0, len(poss_msgs), 2)]
+    for possible_msg in poss_msgs:
+        check_vocab(possible_msg)
+    poss_msgs = sorted(poss_msgs, key=lambda x:x[2], reverse=True)
+    print(f"deciphered message > {poss_msgs[0][0]}")
+    print(f"key > {poss_msgs[0][1]}")
 
-decryptAllCases(input("caesar cipher to decipher > "))
+decrypt_all(input("caesar cipher to decipher > "))
