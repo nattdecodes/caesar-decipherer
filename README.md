@@ -1,4 +1,4 @@
-# Caesar Salad
+# Caesar Salad: a decipherer
 
 ## How It Works
 This command-line Python decipherer uses natural language processing to automatically decipher encrypted messages without requiring a key input.
