@@ -23,7 +23,7 @@ def cipher_decrypt(ciphertext, key):
 def checkVocab(possibleMsg):
     hits = 0
     for word in possibleMsg[0].split():
-        with open(r"caesar-decypherer\englishwords.txt", "r") as wEn:
+        with open(r"englishwords.txt", "r") as wEn:
             for line in wEn:
                 if line.strip() == word.lower():
                     hits += 1
