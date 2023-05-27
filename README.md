@@ -16,3 +16,6 @@ The program currently only supports uppercase and lowercase letters of the Engli
 
 ## Contributing
 Contributions to this project are welcome. Please open an issue or submit a pull request for any improvements or bug fixes.
+
+## Thanks
+Thank you first20hours for the [English word list](https://github.com/first20hours/google-10000-english)
