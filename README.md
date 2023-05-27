@@ -1,4 +1,5 @@
-# Caesar Salad: a decipherer
+# Caesar Salad
+A caesar decipherer
 
 ## How It Works
 This command-line Python decipherer uses natural language processing to automatically decipher encrypted messages without requiring a key input.
@@ -16,4 +17,4 @@ The program currently only supports uppercase and lowercase letters of the Engli
 Contributions to this project are welcome. Please open an issue or submit a pull request for any improvements or bug fixes.
 
 ## Thanks
-Thank you first20hours for the [English word list](https://github.com/first20hours/google-10000-english)
+Thank you first20hours for the [English word list](https://github.com/first20hours/google-10000-english).
