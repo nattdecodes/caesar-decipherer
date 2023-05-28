@@ -4,7 +4,7 @@ A caesar decipherer
 ## How It Works
 This command-line Python decipherer uses natural language processing to automatically decipher encrypted messages without requiring a key input.
 
-By analyzing the ciphertext and leveraging linguistic patterns (AKA frequently used words), the program determines the most probable decryption key and produces the corresponding plaintext.
+By analyzing the ciphertext and leveraging linguistic and letter patterns (AKA frequently used words and average letter distributions), the program determines the most probable decryption key and produces the corresponding plaintext.
 
 ## ToDo
 - [X] Optimise using letter distribution
