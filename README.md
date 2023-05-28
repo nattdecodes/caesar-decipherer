@@ -7,7 +7,7 @@ This command-line Python decipherer uses natural language processing to automati
 By analyzing the ciphertext and leveraging linguistic patterns (AKA frequently used words), the program determines the most probable decryption key and produces the corresponding plaintext.
 
 ## ToDo
-- [ ] Optimise using letter distribution
+- [X] Optimise using letter distribution
 - [ ] Add more languages (suggestions are welcome!)
 
 ## Limitations
