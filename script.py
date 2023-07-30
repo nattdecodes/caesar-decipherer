@@ -100,6 +100,8 @@ def decrypt_all(encrypted_msg):
 
     print(f"deciphered message > {v_sorted_dec[0][0]}")
     print(f"key > {i_sorted_dec[0][1]}")
-
 # Format: ["possible message", keynbr, indexdistrnbr, hitsnbr]
-decrypt_all(input("caesar cipher to decipher > "))
+
+if __name__ == "__main__":
+    cipher = input("caesar cipher to decipher > ")
+    print(decrypt_all(cipher))
