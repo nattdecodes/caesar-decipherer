@@ -20,3 +20,6 @@ Contributions to this project are welcome. Please open an issue or submit a pull
 ## Thanks
 Thank you first20hours for the [English word list](https://github.com/first20hours/google-10000-english).
 Thank you evilpacket for the [English letter distribution file](https://gist.github.com/evilpacket/5973230)
+
+## License
+This is licensed under the [MIT License](https://mit-license.org/).
