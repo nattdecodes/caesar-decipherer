@@ -1,6 +1,6 @@
-# pylint: disable=missing-module-docstring
-# pylint: disable=missing-function-docstring
+# pylint: disable=locally-disabled, multiple-statements, fixme, line-too-long, missing-function-docstring, missing-module-docstring
 import json
+import os
 def cipher_decrypt(ciphertext, key):
     decrypted = ""
     for char in ciphertext:
@@ -31,12 +31,14 @@ def letter_distr(possible_msg):
             total_letters += 1
     # Calculate percentage distribution
     distribution = {letter: (count / total_letters * 100) if total_letters > 0 else 0 for letter, count in occurrences.items()}
+    # Establish absolute path
+    script_dir = os.path.dirname(__file__)
     # Load English letter distribution from JSON file
-    with open("caesar-salad/distributionfiles/englishletters.json") as json_file: dic_distr = json.load(json_file)
+    with open(os.path.join(script_dir, "distributionfiles/englishletters.json"), "r", encoding="utf-8") as json_file: dic_distr = json.load(json_file)
     # Compare distributions
     for letter in occurrences.keys():
         # Compare percentage distributions
-        index = (distribution[letter]/dic_distr[letter])
+        index = distribution[letter]/dic_distr[letter]
         indexes.append(index)
     # Calculate the index average
     filtered_nbrs = [num for num in indexes if num != 0.0]
@@ -45,8 +47,10 @@ def letter_distr(possible_msg):
 
 def check_vocab(possible_msg):
     hits = 0
+    # Establish absolute path
+    script_dir = os.path.dirname(__file__)
     for word in possible_msg[0].split():
-        with open(r"caesar-salad\wordfiles\englishwords.txt", "r", encoding="utf8") as wl_en:
+        with open(os.path.join(script_dir, "wordfiles/englishwords.txt"), "r", encoding="utf8") as wl_en:
             for line in wl_en:
                 if line.strip() == word.lower():
                     hits += 1
