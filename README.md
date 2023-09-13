@@ -1,5 +1,6 @@
 # 🥗 Caesar Decipherer
-**No need to know the key!**\n
+**No need to know the key!**
+
 A caesar cipher decipherer where the key and the deciphered message is calculated (see below for how it works)
 
 ## How It Works
