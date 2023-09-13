@@ -1,5 +1,5 @@
 # Caesar Salad
-A caesar decipherer
+A caesar cipher decipherer
 
 ## How It Works
 This command-line Python decipherer uses natural language processing to automatically decipher encrypted messages without requiring a key input.
