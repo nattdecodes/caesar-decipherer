@@ -10,7 +10,7 @@ By analyzing the ciphertext and leveraging linguistic and letter patterns (AKA f
 
 ## ToDo
 - [ ] Add support for spaceless encrypted messages
-- [ ] Add more languages (suggestions are welcome!)
+- [ ] Add support for more languages (suggestions are welcome!)
 - [X] ~~Optimise using letter distribution~~
 
 ## Limitations
