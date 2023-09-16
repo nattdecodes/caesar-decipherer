@@ -1,7 +1,7 @@
 # 🥗 Caesar Decipherer
 **No need to know the key!**
 
-A caesar cipher decipherer where the key and the deciphered message is calculated (see below for how it works)
+A caesar cipher decipherer where the key and the deciphered message are automatically calculated (see below for how it works)
 
 ## How It Works
 This command-line Python decipherer uses natural language processing to automatically decipher encrypted messages without requiring a key input.
