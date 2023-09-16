@@ -24,4 +24,4 @@ Thank you to first20hours for the [English word list](https://github.com/first20
 Thank you to evilpacket for the [English letter distribution file](https://gist.github.com/evilpacket/5973230)
 
 ## License
-This is licensed under the [MIT License](https://mit-license.org/).
+This software is licensed under the [MIT License](https://mit-license.org/).
