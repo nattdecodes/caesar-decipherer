@@ -11,7 +11,7 @@ By analyzing the ciphertext and leveraging linguistic and letter patterns (AKA f
 ## ToDo
 - [ ] Add support for spaceless encrypted messages
 - [ ] Add support for more languages (suggestions are welcome!)
-- [X] ~~Optimise using letter distribution~~
+- [X] ~~Optimize using letter distribution~~
 
 ## Limitations
 The program currently only supports uppercase and lowercase letters of the English alphabet. Other characters will be left unchanged.
