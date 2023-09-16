@@ -20,8 +20,8 @@ The program currently only supports uppercase and lowercase letters of the Engli
 Contributions to this project are welcome. Please open an issue or submit a pull request for any improvements or bug fixes.
 
 ## Thanks
-Thank you first20hours for the [English word list](https://github.com/first20hours/google-10000-english).
-Thank you evilpacket for the [English letter distribution file](https://gist.github.com/evilpacket/5973230)
+Thank you to first20hours for the [English word list](https://github.com/first20hours/google-10000-english).
+Thank you to evilpacket for the [English letter distribution file](https://gist.github.com/evilpacket/5973230)
 
 ## License
 This is licensed under the [MIT License](https://mit-license.org/).
