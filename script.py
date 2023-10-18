@@ -1,6 +1,8 @@
 # pylint: disable=locally-disabled, multiple-statements, fixme, line-too-long, missing-function-docstring, missing-module-docstring
 import json
 import os
+
+
 def cipher_decrypt(ciphertext, key):
     decrypted = ""
     for char in ciphertext:
@@ -22,6 +24,7 @@ def cipher_decrypt(ciphertext, key):
 
 def letter_distr(possible_msg):
     indexes = []
+    # Initialize occurrences in message
     occurrences = {letter: 0 for letter in "abcdefghijklmnopqrstuvwxyz"}
     # Calculate letter distribution in possible_msg
     total_letters = 0
