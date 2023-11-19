@@ -1,3 +1,0 @@
-/distributionrenderer.py
-/testing.py
-/testing2.py
