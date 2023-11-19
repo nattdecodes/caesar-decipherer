@@ -2,7 +2,7 @@ import os
 from math import log
 
 # Build a cost dictionary, assuming Zipf's law and cost = -math.log(probability).
-words = open(r"wordfiles\englishwords.txt").read().split()
+words = open(r"C:\Users\natac\OneDrive\Documents\VSC\caesar-salad\wordfiles\englishwords.txt").read().split()
 
 # Navigate to the parent directory
 parent_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -11,7 +11,7 @@ file_path = os.path.join(parent_directory, "wordfiles", "englishwords.txt")
 # Check if the file exists
 if os.path.exists(file_path):
     # If the file exists, you can open and read it
-    words = open(r"wordfiles\englishwords.txt").read().split()
+    words = open(r"C:\Users\natac\OneDrive\Documents\VSC\caesar-salad\wordfiles\englishwords.txt").read().split()
 else:
     print("The specified file does not exist.")
 
@@ -48,4 +48,4 @@ def infer_spaces(s):
 
     print(" ".join(reversed(out)))
 
-infer_spaces("Pythonunittestm.oduleisusedt,otestaunitof,sourcecodesupposeyouneedto,testyourproject.")
+infer_spaces("Pythonunittestmo.duleisusedto,testaunitof,sourcecodesupposeyouneedto,testyourproject.")
