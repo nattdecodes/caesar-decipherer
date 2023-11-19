@@ -1,6 +1,26 @@
 import os
 from math import log
 
+
+def cipher_decrypt(ciphertext, key):
+    decrypted = ""
+    for char in ciphertext:
+        # UPPERCASE
+        if char.isupper():
+            c_index = ord(char) - ord('A')
+            # shift the current character to left by key positions to get its original position
+            c_og_pos = (c_index - key) % 26 + ord('A')
+            c_og = chr(c_og_pos)
+            decrypted += c_og
+        # lowercase
+        elif char.islower():
+            c_index = ord(char) - ord('a')
+            c_og_pos = (c_index - key) % 26 + ord('a')
+            c_og = chr(c_og_pos)
+            decrypted += c_og
+        else: decrypted += char# if its neither alphabetical nor a number, just leave it like that
+    return decrypted
+
 # Build a cost dictionary, assuming Zipf's law and cost = -math.log(probability).
 words = open(r"C:\Users\natac\OneDrive\Documents\VSC\caesar-salad\wordfiles\englishwords.txt").read().split()
 
@@ -46,6 +66,23 @@ def infer_spaces(s):
         out.append(s[i-k:i])
         i -= k
 
-    print(" ".join(reversed(out)))
+    return (" ".join(reversed(out)))
 
-infer_spaces("Pythonunittestmo.duleisusedto,testaunitof,sourcecodesupposeyouneedto,testyourproject.")
+#print(infer_spaces("Pythonunittestmo.duleisusedto,testaunitof,sourcecodesupposeyouneedto,testyourproject."))
+print("--------")
+
+# Decrypt every possible keys
+msg = "Bkftazgzuffqefya.pgxquegeqpfa,fqefmgzufar,eagdoqoapqegbbaeqkagzqqpfa,fqefkagdbdavqof."
+key = 25;
+while key > 0:
+    decrypted_gibberish = cipher_decrypt(msg, key)
+    result = infer_spaces(decrypted_gibberish)
+    wordss = result.split()
+    avlen = sum(len(word) for word in wordss) / len(wordss)
+
+    if avlen > 2:
+        print(result)
+    #print("Average word length: ", avlen)
+    key -= 1
+
+#* COMMENTS: holy shit it works
